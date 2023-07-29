@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  snake:
+    build: ./snake
+    container_name: snake_c
+    ports:
+      - '19006:19006'
+    volumes:
+      - ./snake:/snake
+      - notused:/snake/node_modules
+    stdin_open: true
+    
+volumes:
+  notused:
